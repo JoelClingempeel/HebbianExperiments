@@ -90,7 +90,7 @@ class Neuron:
 
 
 # TODO Fix the issue with neuron IDs occurring if multiple nets are created in a runtime.
-class NeuralNet:
+class HebbNet:
     def __init__(self, scale=30, weight_init_exp=.25, weight_init_std=.25):
         self.neurons = {}  # id to neuron
         self.scale = scale
