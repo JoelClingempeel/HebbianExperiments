@@ -129,6 +129,10 @@ class HebbNet:
             neuron.learn()
         for neuron in self.neurons.values():
             neuron.fire()
+    
+    def steady_fire(self, count, memory):
+        for _ in range(count):
+            self.fire_neurons(memory)
             
     def get_encoding(self):
         return np.array([neuron.firing for neuron in self.neurons.values()])
